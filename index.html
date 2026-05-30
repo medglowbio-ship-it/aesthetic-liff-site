@@ -1878,7 +1878,7 @@ function toggleFromDetail() {
 
 async function sendSingleToLine() {
   if (!currentDetailKey) return;
-  const msg = `您好，我想了解「${currentDetailKey}」療程的詳細資訊，請問方便為我安排諮詢嗎？`;
+  const msg = `您好，我想了解以下療程的詳細資訊：\n\n・${currentDetailKey}\n\n請問方便為我安排諮詢嗎？`;
   trackMetaLead([currentDetailKey]);
   if (typeof liff !== 'undefined' && liff.isInClient && liff.isInClient()) {
     try {
